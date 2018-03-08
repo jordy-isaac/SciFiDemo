@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{F1F3688A-207D-5A5A-AFB9-18DF2D384399}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/LookX.cs">
+    <Files>
+      <File FileName="Assets/Game/Scripts/Player.cs" Line="37" Column="5" />
+      <File FileName="Assets/Game/Scripts/LookX.cs" Line="26" Column="1" />
+      <File FileName="Assets/Game/Scripts/LookY.cs" Line="20" Column="50" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.SciFiDemo3 PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
