@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciFiDemo3", "SciFiDemo3.csproj", "{F1F3688A-207D-5A5A-AFB9-18DF2D384399}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciFiDemo3.Editor", "SciFiDemo3.Editor.csproj", "{92D73EB3-73BD-0F61-63C2-493B3987EDC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1F3688A-207D-5A5A-AFB9-18DF2D384399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F3688A-207D-5A5A-AFB9-18DF2D384399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F3688A-207D-5A5A-AFB9-18DF2D384399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F3688A-207D-5A5A-AFB9-18DF2D384399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92D73EB3-73BD-0F61-63C2-493B3987EDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D73EB3-73BD-0F61-63C2-493B3987EDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D73EB3-73BD-0F61-63C2-493B3987EDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D73EB3-73BD-0F61-63C2-493B3987EDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
