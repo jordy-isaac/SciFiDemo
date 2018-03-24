@@ -24,6 +24,17 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray rayOrigin = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+
+            if (Physics.Raycast(rayOrigin, Mathf.Infinity))
+            {
+                Debug.Log("raycast hit something");
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.visible = true;
