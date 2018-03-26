@@ -13,6 +13,14 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private GameObject _hitMarkerPrefab;
 
+    [SerializeField]
+    private AudioSource _weaponAudio;
+
+    [SerializeField]
+    private int currentAmmo;
+    [SerializeField]
+    private int maxAmmo = 50;
+
 
 	// Use this for initialization
 	void Start () 
@@ -22,6 +30,8 @@ public class Player : MonoBehaviour {
         // hide mouse cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        currentAmmo = maxAmmo;
     }
 
 	
@@ -29,22 +39,14 @@ public class Player : MonoBehaviour {
 	void Update () 
     {
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && currentAmmo > 0)
         {
-            _muzzleFlash.SetActive(true);
-
-            Ray rayOrigin = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            RaycastHit hitInfo;
-
-            if (Physics.Raycast(rayOrigin, out hitInfo))
-            {
-                Debug.Log(hitInfo.transform.name);
-                Instantiate(_hitMarkerPrefab, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
-            }
+            Shoot();
         }
         else 
         {
             _muzzleFlash.SetActive(false);
+            _weaponAudio.Stop();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -66,6 +68,26 @@ public class Player : MonoBehaviour {
 
         velocity = transform.transform.TransformDirection(velocity);
         _controller.Move(velocity * Time.deltaTime);
+    }
+
+    void Shoot()
+    {
+        _muzzleFlash.SetActive(true);
+        currentAmmo--;
+
+        if (_weaponAudio.isPlaying == false)
+        {
+            _weaponAudio.Play();
+        }
+
+        Ray rayOrigin = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hitInfo;
+
+        if (Physics.Raycast(rayOrigin, out hitInfo))
+        {
+            Debug.Log(hitInfo.transform.name);
+            Instantiate(_hitMarkerPrefab, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
+        }
     }
 
 
