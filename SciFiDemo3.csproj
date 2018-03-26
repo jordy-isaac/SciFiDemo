@@ -373,6 +373,7 @@
     <Compile Include="Assets\Game\Scripts\LookX.cs" />
     <Compile Include="Assets\Game\Scripts\LookY.cs" />
     <Compile Include="Assets\Game\Scripts\Player.cs" />
+    <Compile Include="Assets\Game\Scripts\UIManager.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\DirectionResource.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Directions.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Overview.cs" />

@@ -21,6 +21,10 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private int maxAmmo = 50;
 
+    private bool isReloading = false;
+
+    private UIManager _uiManager;
+
 
 	// Use this for initialization
 	void Start () 
@@ -32,6 +36,8 @@ public class Player : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
 
         currentAmmo = maxAmmo;
+
+        _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
     }
 
 	
@@ -47,6 +53,12 @@ public class Player : MonoBehaviour {
         {
             _muzzleFlash.SetActive(false);
             _weaponAudio.Stop();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && isReloading == false)
+        {
+            isReloading = true;
+            StartCoroutine(Reload());
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -74,6 +86,7 @@ public class Player : MonoBehaviour {
     {
         _muzzleFlash.SetActive(true);
         currentAmmo--;
+        _uiManager.UpdateAmmo(currentAmmo);
 
         if (_weaponAudio.isPlaying == false)
         {
@@ -88,6 +101,14 @@ public class Player : MonoBehaviour {
             Debug.Log(hitInfo.transform.name);
             Instantiate(_hitMarkerPrefab, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
         }
+    }
+
+    IEnumerator Reload()
+    {
+        yield return new WaitForSeconds(1.5f);
+        currentAmmo = maxAmmo;
+        _uiManager.UpdateAmmo(currentAmmo);
+        isReloading = false;
     }
 
 
