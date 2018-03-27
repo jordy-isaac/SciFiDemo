@@ -22,6 +22,7 @@ public class Player : MonoBehaviour {
     private int maxAmmo = 50;
 
     private bool isReloading = false;
+    public bool hasCoin = false;
 
     private UIManager _uiManager;
 
@@ -105,7 +106,7 @@ public class Player : MonoBehaviour {
 
     IEnumerator Reload()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         currentAmmo = maxAmmo;
         _uiManager.UpdateAmmo(currentAmmo);
         isReloading = false;
