@@ -104,6 +104,12 @@ public class Player : MonoBehaviour {
         {
             Debug.Log(hitInfo.transform.name);
             Instantiate(_hitMarkerPrefab, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
+
+            Destructable crate = hitInfo.transform.GetComponent<Destructable>();
+            if (crate != null)
+            {
+                crate.DestroyCrate();
+            }
         }
     }
 
