@@ -370,6 +370,7 @@
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\WaypointProgressTracker.cs" />
     <Compile Include="Assets\Game\Scripts\Coin.cs" />
+    <Compile Include="Assets\Game\Scripts\Destructable.cs" />
     <Compile Include="Assets\Game\Scripts\HItMarkerCleanup.cs" />
     <Compile Include="Assets\Game\Scripts\LookX.cs" />
     <Compile Include="Assets\Game\Scripts\LookY.cs" />
