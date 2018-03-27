@@ -374,6 +374,7 @@
     <Compile Include="Assets\Game\Scripts\LookX.cs" />
     <Compile Include="Assets\Game\Scripts\LookY.cs" />
     <Compile Include="Assets\Game\Scripts\Player.cs" />
+    <Compile Include="Assets\Game\Scripts\SharkShop.cs" />
     <Compile Include="Assets\Game\Scripts\UIManager.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\ComputerVisionController.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\EdgeDetector.cs" />

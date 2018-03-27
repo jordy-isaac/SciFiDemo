@@ -20,11 +20,14 @@ public class Player : MonoBehaviour {
     private int currentAmmo;
     [SerializeField]
     private int maxAmmo = 50;
+    [SerializeField]
+    private GameObject _weapon;
 
     private bool isReloading = false;
     public bool hasCoin = false;
 
     private UIManager _uiManager;
+
 
 
 	// Use this for initialization
@@ -110,6 +113,11 @@ public class Player : MonoBehaviour {
         currentAmmo = maxAmmo;
         _uiManager.UpdateAmmo(currentAmmo);
         isReloading = false;
+    }
+
+    public void EnableWeapon()
+    {
+        _weapon.SetActive(true);
     }
 
 
